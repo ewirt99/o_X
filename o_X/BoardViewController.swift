@@ -5,8 +5,35 @@
 
 import UIKit
 
+
+
+
+
+
+
 class BoardViewController: UIViewController {
 
+
+    
+    
+    @IBAction func moveButtonLabel(sender: UIButton) {
+        
+        print("Board clicked" + String(sender.tag))
+        
+    }
+    
+    @IBAction func logoutLabel(sender: AnyObject) {
+    }
+    
+   
+    @IBAction func newGameLabel(sender: AnyObject) {
+    }
+   
+    
+    @IBOutlet weak var logoutLabel: UIButton!
+    
+    
+    
     @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
     
