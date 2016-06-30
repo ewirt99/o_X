@@ -69,10 +69,14 @@
                                             <constraint firstAttribute="width" constant="5" id="7lK-ad-CZ8"/>
                                             <constraint firstAttribute="height" constant="5" id="bs7-0D-ipR"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="bs7-0D-ipR"/>
                                                 <exclude reference="7lK-ad-CZ8"/>
+                                                <exclude reference="bs7-0D-ipR"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -85,6 +89,10 @@
                                             <constraint firstAttribute="height" constant="5" id="jNM-Ab-CWK"/>
                                             <constraint firstAttribute="width" constant="5" id="pzU-gE-JhC"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="jNM-Ab-CWK"/>
@@ -101,10 +109,14 @@
                                             <constraint firstAttribute="width" constant="5" id="2rd-hj-oHG"/>
                                             <constraint firstAttribute="height" constant="5" id="Apx-rF-0kd"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="Apx-rF-0kd"/>
                                                 <exclude reference="2rd-hj-oHG"/>
+                                                <exclude reference="Apx-rF-0kd"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -117,6 +129,10 @@
                                             <constraint firstAttribute="height" constant="5" id="JXu-oS-si7"/>
                                             <constraint firstAttribute="width" constant="5" id="Rvb-1P-hEz"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="JXu-oS-si7"/>
@@ -133,10 +149,14 @@
                                             <constraint firstAttribute="width" constant="5" id="eYf-oK-I8E"/>
                                             <constraint firstAttribute="height" constant="5" id="zHq-at-SXc"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="zHq-at-SXc"/>
                                                 <exclude reference="eYf-oK-I8E"/>
+                                                <exclude reference="zHq-at-SXc"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -149,34 +169,26 @@
                                             <constraint firstAttribute="width" constant="5" id="fak-Va-CIY"/>
                                             <constraint firstAttribute="height" constant="5" id="qVM-OZ-qYC"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="qVM-OZ-qYC"/>
                                                 <exclude reference="fak-Va-CIY"/>
+                                                <exclude reference="qVM-OZ-qYC"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cXv-uR-2m6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du3-hF-IjQ">
-                                        <rect key="frame" x="177" y="8" width="150" height="150"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="5" id="FTd-mY-8gf"/>
-                                            <constraint firstAttribute="height" constant="5" id="SK8-XG-GNr"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="SK8-XG-GNr"/>
-                                                <exclude reference="FTd-mY-8gf"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmp-WS-RgR"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2k-6g-H3S">
                                         <rect key="frame" x="5" y="4" width="150" height="150"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6i-oa-XFZ"/>
                                         </connections>
@@ -187,14 +199,38 @@
                                             <constraint firstAttribute="width" constant="5" id="6zS-Qt-dce"/>
                                             <constraint firstAttribute="height" constant="5" id="XOh-oX-I6V"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="XOh-oX-I6V"/>
                                                 <exclude reference="6zS-Qt-dce"/>
+                                                <exclude reference="XOh-oX-I6V"/>
                                             </mask>
                                         </variation>
                                         <connections>
                                             <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KjT-lU-ate"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du3-hF-IjQ">
+                                        <rect key="frame" x="177" y="8" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="5" id="FTd-mY-8gf"/>
+                                            <constraint firstAttribute="height" constant="5" id="SK8-XG-GNr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="71"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FTd-mY-8gf"/>
+                                                <exclude reference="SK8-XG-GNr"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="moveButtonLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rmp-WS-RgR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -289,6 +325,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="YiH-4C-0oH" id="Cr0-AI-akO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

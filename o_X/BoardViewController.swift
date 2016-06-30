@@ -9,31 +9,56 @@ import UIKit
 
 
 
-
-
 class BoardViewController: UIViewController {
 
-
-    
+    var gameObject = OXGame()
     
     @IBAction func moveButtonLabel(sender: UIButton) {
         
-        print("Board clicked" + String(sender.tag))
+        let moveValue = gameObject.playMoves(sender.tag-1).rawValue
+        sender.setTitle(moveValue, forState: .Normal)
+        
+        if gameObject.state() == .Won {
+            print ("You won!")
+        }
+        
+        if gameObject.state() == .Tie {
+            print ("HAHA you tied. classic.")
+        }
+        
+        if (gameObject.state() == .Won) {
+            let alert = UIAlertController(title: "Winnah Winnah Chicken Dinnah!", message: "Now Go Get a life", preferredStyle: .Alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
+            alert.addAction(dismiss)
+            presentViewController(alert, animated: true, completion: nil)
+        }
+        if (gameObject.state() == .Tie) {
+            let alert = UIAlertController(title: "You Tied", message: "You're an Average Fucker", preferredStyle: .Alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
+            alert.addAction(dismiss)
+            presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func logoutLabel(sender: UIButton) {
+    }
+    
+   
+    @IBAction func newGameLabel(sender: UIButton) {
+        gameObject.reset()
+        print("New game button pressed.")
+        
+        for subview in boardView.subviews {
+            if let button = subview as? UIButton {
+                button.setTitle("", forState: .Normal)
+            }
+        }
         
     }
-    
-    @IBAction func logoutLabel(sender: AnyObject) {
-    }
-    
    
-    @IBAction func newGameLabel(sender: AnyObject) {
-    }
-   
+    @IBOutlet weak var boardView: UIView!
     
     @IBOutlet weak var logoutLabel: UIButton!
-    
-    
-    
     @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
     
@@ -41,10 +66,6 @@ class BoardViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    @IBAction func newGameButtonPressed(sender: UIButton) {
-        print("New game button pressed.")
     }
     
     // Create additional IBActions here.

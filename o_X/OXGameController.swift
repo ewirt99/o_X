@@ -9,5 +9,21 @@
 import UIKit
 
 class OXGameController: NSObject {
+//this does nothing additional
+    
+    static var sharedInstance = OXGameController()
+    
+    private var currentGame:OXGame = OXGame()
+    
+    func getCurrentGame() -> OXGame {
+        return currentGame
+    }
 
+    func restartGame(){
+        currentGame.reset()
+    }
+    
+    func playMove (location:Int) {
+        currentGame.playMoves(location)
+    }
 }
