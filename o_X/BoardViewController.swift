@@ -13,6 +13,7 @@ class BoardViewController: UIViewController {
 
     var gameObject = OXGame()
     
+    
     @IBAction func moveButtonLabel(sender: UIButton) {
         
         let moveValue = gameObject.playMoves(sender.tag-1).rawValue
@@ -27,22 +28,33 @@ class BoardViewController: UIViewController {
         }
         
         if (gameObject.state() == .Won) {
-            let alert = UIAlertController(title: "Winnah Winnah Chicken Dinnah!", message: "Now Go Get a life", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Player \(moveValue) with the Dub", message: "Now Go Get a life", preferredStyle: .Alert)
             let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
             alert.addAction(dismiss)
             presentViewController(alert, animated: true, completion: nil)
+            
+             newGameOutlet.hidden = false
         }
         if (gameObject.state() == .Tie) {
             let alert = UIAlertController(title: "You Tied", message: "You're an Average Fucker", preferredStyle: .Alert)
             let dismiss = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
             alert.addAction(dismiss)
             presentViewController(alert, animated: true, completion: nil)
+
+         newGameOutlet.hidden = false
+            
         }
+  
+    
     }
+    
+    
     
     @IBAction func logoutLabel(sender: UIButton) {
     }
     
+      
+
    
     @IBAction func newGameLabel(sender: UIButton) {
         gameObject.reset()
@@ -51,8 +63,13 @@ class BoardViewController: UIViewController {
         for subview in boardView.subviews {
             if let button = subview as? UIButton {
                 button.setTitle("", forState: .Normal)
+                
+        newGameOutlet.hidden = true
+
+            
             }
         }
+        
         
     }
    
@@ -62,8 +79,12 @@ class BoardViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     // Create additional IBOutlets here.
     
+    @IBOutlet weak var newGameOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newGameOutlet.hidden = true
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
