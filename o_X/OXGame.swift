@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 enum CellType: String {
     
     case O = "O"
@@ -26,7 +27,7 @@ enum CellType: String {
 }
 
 enum OXGameState {
-    case InProgress, Tie, Won
+    case InProgress, Tie, Won, open, abandoned
 }
 
 class OXGame {
@@ -34,6 +35,10 @@ class OXGame {
     private var board = [CellType](count: 9, repeatedValue: .Empty)
 
     let startType: CellType = .X  //officialy celltype.X
+    
+    var ID: Int = 0
+   
+    var host: String = ""
     
     var turnCount: Int {
         return board.filter{ $0 != .Empty }.count
@@ -72,8 +77,68 @@ class OXGame {
         
         return OXGameState.InProgress
     }
-}
     
+    
+    private func deserialiseBoard(boardString:String) -> [CellType] {
+        
+        var board = [CellType]()
+        for char in boardString.characters {
+            if char == "x" {
+                board.append(.X)
+            }
+            if char == "o"{
+                board.append(.O)
+            }
+            else {
+                board.append(.Empty)
+            }
+        }
+        return board
+    }
+//        return boardString.characters.map { char in
+//            if char == "X" { return .X }
+//            if char == "O" { return .O }
+//            return .Empty
+//        }
+
+    
+    private func serialiseBoard() -> String {
+        var boardString = ""
+        for cell in board {
+            if cell == .X {
+                boardString += "x"
+            }
+            else if cell == .O {
+                boardString += "o"
+            }
+            else {
+                boardString += "_"
+            }
+        }
+        return boardString
+    }
+    
+    init()  {
+        //we are simulating setting our board from the internet
+        let simulatedBoardStringFromNetwork = "_________" //update this string to different values to test your model serialisation
+        self.board = deserialiseBoard(simulatedBoardStringFromNetwork) //your OXGame board model should get set here
+        if(simulatedBoardStringFromNetwork == serialiseBoard())    {
+            print("start\n------------------------------------")
+            print("congratulations, you successfully deserialised your board and serialized it again correctly. You can send your data model over the internet with this code. 1 step closer to network OX ;)")
+            
+            print("done\n------------------------------------")
+        }   else    {
+            print("start\n------------------------------------")
+            print ("your board deserialisation and serialization was not correct :( carry on coding on those functions")
+            
+            print("done\n------------------------------------")
+        }
+        
+    }
+}
+
+
+
     
     
     

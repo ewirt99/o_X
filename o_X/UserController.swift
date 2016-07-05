@@ -17,6 +17,8 @@ class UserController {
     
     var currentUser: User?
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     func register(email email: String, password: String, onCompletion: (User?, String?) -> Void) {
         
         if email.isEmpty || password.isEmpty {
@@ -38,6 +40,11 @@ class UserController {
             return
         }
         
+        defaults.setObject(email, forKey: "currentUserEmail")
+        defaults.setObject(password, forKey: "currentUserPassword")
+        
+        defaults.synchronize()
+        
         currentUser = User(email: email, password: password)
         users.append(currentUser!)
         onCompletion(currentUser, nil)
@@ -52,15 +59,21 @@ class UserController {
                 return
             }
         }
-        
+        defaults.setObject(email, forKey: "currentUserEmail")
+        defaults.setObject(password, forKey: "currentUserPassword")
+        defaults.synchronize()
         onCompletion(nil, "Email and/or password is incorrect.")
     }
     
     func logout(onCompletion onCompletion: (String?) -> Void) {
         currentUser = nil
         onCompletion(nil)
+        
+        
+        defaults.removeObjectForKey("currentUserEmail")
+        defaults.removeObjectForKey("currentUserPassword")
+        
+        defaults.synchronize()
     }
     
 }
-
-

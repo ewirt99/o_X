@@ -19,6 +19,7 @@
 		5F71BB421D25776A0070E4E5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F71BB411D25776A0070E4E5 /* Onboarding.storyboard */; };
 		5F71BB441D257E080070E4E5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71BB431D257E080070E4E5 /* RegisterViewController.swift */; };
 		5F71BB461D257E1C0070E4E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71BB451D257E1C0070E4E5 /* LoginViewController.swift */; };
+		5FF2A74C1D2A801E00E96D99 /* NetworkGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF2A74B1D2A801E00E96D99 /* NetworkGamesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		5F71BB411D25776A0070E4E5 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		5F71BB431D257E080070E4E5 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5F71BB451D257E1C0070E4E5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FF2A74B1D2A801E00E96D99 /* NetworkGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkGamesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				02F782C51D22966600E3BC29 /* AppDelegate.swift */,
 				02F782C71D22966600E3BC29 /* BoardViewController.swift */,
+				5FF2A74A1D2A800000E96D99 /* Network */,
 				5F4977291D23D99000CA5928 /* OX SHIT */,
 				5F71BB3A1D2563230070E4E5 /* New Group1 */,
 				02F782CC1D22966600E3BC29 /* Assets.xcassets */,
@@ -99,6 +102,14 @@
 				5F71BB411D25776A0070E4E5 /* Onboarding.storyboard */,
 			);
 			name = "New Group1";
+			sourceTree = "<group>";
+		};
+		5FF2A74A1D2A800000E96D99 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5FF2A74B1D2A801E00E96D99 /* NetworkGamesViewController.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				02F782C81D22966600E3BC29 /* BoardViewController.swift in Sources */,
 				5F71BB461D257E1C0070E4E5 /* LoginViewController.swift in Sources */,
 				5F49772B1D23D9C500CA5928 /* OXGame.swift in Sources */,
+				5FF2A74C1D2A801E00E96D99 /* NetworkGamesViewController.swift in Sources */,
 				5F4977331D2436A300CA5928 /* OXGameController.swift in Sources */,
 				02F782C61D22966600E3BC29 /* AppDelegate.swift in Sources */,
 			);
